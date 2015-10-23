@@ -7,7 +7,18 @@ $headers = array(
  "X-Parse-Application-Id: " . $appId,
  "X-Parse-REST-API-Key: " . $restKey
 );
-$objectData = '{"name":"Adarsh", "age":"26"}';
+
+$arr = $_POST["tags"];
+$email = $_POST["email"];
+
+//$arr = array("agile", "software", "healthcare", "messaging", "advertising", "data mining", "entertainment", "booking", "application development", "api", "energy", "hardware", "android");
+$arr2 =  array(tags => $arr);
+//$objectData = json_encode($arr);
+$objectData = json_encode($arr2);
+
+echo $email;
+echo $objectData;
+//$objectData = '{"name":"Adarsh", "age":"26"}';
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -21,7 +32,7 @@ $decoded = json_decode($response, true);
 curl_close($rest);
 
 
-print_r(array_values($decoded)[0]);
+/*print_r(array_values($decoded)[0]);
 
 echo json_last_error();
 
@@ -32,7 +43,7 @@ $jsonIterator = new RecursiveIteratorIterator(
 foreach ($jsonIterator as $key => $val) {
     echo "<tr><td>$key</td><td>$val</td></tr>";
 }
-
+*/
 
 
 ?>
@@ -121,27 +132,54 @@ foreach ($jsonIterator as $key => $val) {
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <p class="lead"><?php echo $first ?></p>
+            <form action="submit.php" method="post">
+              <table class="table" id="table">
+                  <thead>
+                      <tr>
+                          <th data-field="id">Application ID </th>
+                          <th data-field="name">Startup Name</th>
+                          <th data-field="biz">Business Evaluator</th>
+                          <th data-field="product">Product Evaluator</th>
+                          <th data-field="tech">Tech Evaluator</th>
+                      </tr>
 
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th data-field="name">Startup Name</th>
-                        <th data-field="id">Application ID</th>
-                    </tr>
+                      <?php
 
-                    <?php
+                      $jsonIterator = new RecursiveIteratorIterator(
+                          new RecursiveArrayIterator(array_values($decoded)[0]),
+                          RecursiveIteratorIterator::SELF_FIRST);
 
-                    $jsonIterator = new RecursiveIteratorIterator(
-                        new RecursiveArrayIterator(array_values($decoded)[0]),
-                        RecursiveIteratorIterator::SELF_FIRST);
+                      foreach ($jsonIterator as $key => $val) {
+                        if (is_array($val)) {
+                            echo "<tr>";
+                            echo "<td>$val[FitScore]</td>";
+                            echo "<td>$val[Name]</td>";
+                            if ($val[Biz] == "0") {
+                                echo "<td><input type='checkbox' name='biz[]' $val[Name]/></td>";
+                            } else {
+                                echo "<td><input type='checkbox' disabled /></td>";
+                            }
+                            if ($val[Product] == "0") {
+                                echo "<td><input type='checkbox' name='product[]' $val[Name]/></td>";
+                            } else {
+                                echo "<td><input type='checkbox' disabled /></td>";
+                            }
+                            if ($val[Tech] == "0") {
+                                echo "<td><input type='checkbox' name='tech[]' value=$val[Name] /></td>";
+                            } else {
+                                echo "<td><input type='checkbox' disabled /></td>";
+                            }
+                            echo "</tr>";
+                        }
+                      }
+                      ?>
+                  </thead>
+              </table>
 
-                    foreach ($jsonIterator as $key => $val) {
-                        echo "<tr><td>$key</td><td>$val</td></tr>";
-                    }
-                    ?>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
-                </thead>
-            </table>
+
 
 
           </div>

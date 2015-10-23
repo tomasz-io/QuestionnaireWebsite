@@ -1,3 +1,53 @@
+<?php
+$url = 'https://api.parse.com/1/functions/hello';
+$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
+$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
+$headers = array(
+ "Content-Type: application/json",
+ "X-Parse-Application-Id: " . $appId,
+ "X-Parse-REST-API-Key: " . $restKey
+);
+
+$arr = $_POST["tech"];
+$email = $_POST["email"];
+
+//$arr = array("agile", "software", "healthcare", "messaging", "advertising", "data mining", "entertainment", "booking", "application development", "api", "energy", "hardware", "android");
+$arr2 =  array(tech => $arr);
+//$objectData = json_encode($arr);
+$objectData = json_encode($arr2);
+
+echo $email;
+echo $objectData;
+//$objectData = '{"name":"Adarsh", "age":"26"}';
+$rest = curl_init();
+curl_setopt($rest,CURLOPT_URL,$url);
+curl_setopt($rest,CURLOPT_POST,1);
+curl_setopt($rest,CURLOPT_POSTFIELDS,$objectData);
+curl_setopt($rest,CURLOPT_HTTPHEADER,$headers);
+curl_setopt($rest,CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($rest,CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($rest);
+$decoded = json_decode($response, true);
+//$first = array_shift($decoded);
+curl_close($rest);
+
+
+/*print_r(array_values($decoded)[0]);
+
+echo json_last_error();
+
+$jsonIterator = new RecursiveIteratorIterator(
+    new RecursiveArrayIterator(json_decode($response, TRUE)),
+    RecursiveIteratorIterator::SELF_FIRST);
+
+foreach ($jsonIterator as $key => $val) {
+    echo "<tr><td>$key</td><td>$val</td></tr>";
+}
+*/
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,24 +125,13 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Your expertise</h1>
+                <h1>Some thank you message</h1>
             </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
-            <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
-            <form action="choose_startups.php" method="post">
-              <!--<div class="form-group"> -->
-                <input type="text" class="form-control" id="tokenfield" name="tags" placeholder="Enter as many tags as you want"/>
-                <br>
-                <input type="text" class="form-control" name="email" placeholder="Enter you email address">
-                <br>
-                <button type="submit" class="btn btn-primary">Next</button>
-              <!--</div>-->
-            </form>
-
-
+            <p class="lead">Some information: you'll get an email soon with your chosen startups etc.</p>
           </div>
         </div>
 
@@ -113,7 +152,7 @@
     <script>
       $('#tokenfield').tokenfield({
         autocomplete: {
-          source: ['UX','UI','IoT','mobile','social','tourism','algorithms','B2B','B2C'],
+          source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
           delay: 100
         },
         showAutocompleteOnFocus: true
