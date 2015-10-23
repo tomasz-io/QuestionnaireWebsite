@@ -75,21 +75,16 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Your expertise</h1>
+                <h1>Hello</h1>
             </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
-            <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
-            <form action="choose_startups.php" method="post">
-              <!--<div class="form-group"> -->
-                <input type="text" class="form-control" id="tokenfield" name="tags" placeholder="Enter as many tags as you want"/>
-                <br>
+            <form action="your_expertise.php" method="post">
                 <input type="text" class="form-control" name="email" placeholder="Enter you email address">
                 <br>
                 <button type="submit" class="btn btn-primary">Next</button>
-              <!--</div>-->
             </form>
 
 

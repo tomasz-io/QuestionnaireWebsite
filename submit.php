@@ -1,5 +1,5 @@
 <?php
-$url = 'https://api.parse.com/1/functions/hello';
+$url = 'https://api.parse.com/1/functions/submit';
 $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
 $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
 $headers = array(
@@ -8,17 +8,15 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
-$arr = $_POST["tech"];
+$biz = $_POST["biz"];
+$product = $_POST["product"];
+$tech = $_POST["tech"];
 $email = $_POST["email"];
 
-//$arr = array("agile", "software", "healthcare", "messaging", "advertising", "data mining", "entertainment", "booking", "application development", "api", "energy", "hardware", "android");
-$arr2 =  array(tech => $arr);
-//$objectData = json_encode($arr);
-$objectData = json_encode($arr2);
+$final_submission =  array(email => $email, biz => $biz, product => $product, tech => $tech);
+$objectData = json_encode($final_submission);
 
-echo $email;
 echo $objectData;
-//$objectData = '{"name":"Adarsh", "age":"26"}';
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -30,21 +28,6 @@ $response = curl_exec($rest);
 $decoded = json_decode($response, true);
 //$first = array_shift($decoded);
 curl_close($rest);
-
-
-/*print_r(array_values($decoded)[0]);
-
-echo json_last_error();
-
-$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($response, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
-
-foreach ($jsonIterator as $key => $val) {
-    echo "<tr><td>$key</td><td>$val</td></tr>";
-}
-*/
-
 
 ?>
 
