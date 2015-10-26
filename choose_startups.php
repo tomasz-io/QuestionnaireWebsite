@@ -117,11 +117,11 @@ curl_close($rest);
               <table class="table" id="table">
                   <thead>
                       <tr>
-                          <th data-field="id">Application ID </th>
                           <th data-field="name">Startup Name</th>
                           <th data-field="biz">Business Evaluator</th>
                           <th data-field="product">Product Evaluator</th>
                           <th data-field="tech">Tech Evaluator</th>
+                          <th data-field="tech">Cancel choice</th>
                       </tr>
 
                       <?php
@@ -132,25 +132,30 @@ curl_close($rest);
 
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
-                            echo "<tr>";
-                            echo "<td>$val[FitScore]</td>";
-                            echo "<td>$val[Name]</td>";
-                            if ($val[Biz] == "0") {
-                                echo "<td><input type='checkbox' name='biz[]' value='$val[Name]'/></td>";
-                            } else {
-                                echo "<td><input type='checkbox' disabled /></td>";
-                            }
-                            if ($val[Product] == "0") {
-                                echo "<td><input type='checkbox' name='product[]' value='$val[Name]'/></td>";
-                            } else {
-                                echo "<td><input type='checkbox' disabled /></td>";
-                            }
-                            if ($val[Tech] == "0") {
-                                echo "<td><input type='checkbox' name='tech[]' value='$val[Name]'/></td>";
-                            } else {
-                                echo "<td><input type='checkbox' disabled /></td>";
-                            }
-                            echo "</tr>";
+
+
+                          echo "<tr>";
+                          echo "<td>$val[Name]</td>";
+                          if ($val[Biz] == "0") {
+                              echo "<td><input type='radio' name='$val[Id]' value='biz'/></td>";
+                          } else {
+                              echo "<td><input type='radio' disabled /></td>";
+                          }
+                          if ($val[Product] == "0") {
+                              echo "<td><input type='radio' name='$val[Id]' value='product'/></td>";
+                          } else {
+                              echo "<td><input type='radio' disabled /></td>";
+                          }
+                          if ($val[Tech] == "0") {
+                              echo "<td><input type='radio' name='$val[Id]' value='tech'/></td>";
+                          } else {
+                              echo "<td><input type='radio' disabled /></td>";
+                          }
+
+                          echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
+
+                          echo "</tr>";
+
                         }
                       }
                       ?>
@@ -182,13 +187,12 @@ curl_close($rest);
 
 
     <script>
-      $('#tokenfield').tokenfield({
-        autocomplete: {
-          source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
-          delay: 100
-        },
-        showAutocompleteOnFocus: true
-      })
+    function clearRadioGroup(GroupName)
+    {
+      var ele = document.getElementsByName(GroupName);
+    	for(var i=0;i<ele.length;i++)
+        ele[i].checked = false;
+    }
     </script>
 
 

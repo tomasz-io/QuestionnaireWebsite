@@ -8,10 +8,28 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
-$biz = $_POST["biz"];
-$product = $_POST["product"];
-$tech = $_POST["tech"];
+// $biz = $_POST["biz"];
+// $product = $_POST["product"];
+// $tech = $_POST["tech"];
+
+$biz = array();
+$product = array();
+$tech = array();
 $email = $_POST["email"];
+
+foreach($_POST as $key => $value)
+{
+  echo $key;
+
+  if (strstr($value, 'biz')) {
+    array_push($biz, $key);
+  } else if ($value == 'product') {
+    array_push($product, $key);
+  } else if ($value == 'tech') {
+    array_push($tech, $key);
+  }
+
+}
 
 $final_submission =  array(email => $email, biz => $biz, product => $product, tech => $tech);
 $objectData = json_encode($final_submission);
