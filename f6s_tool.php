@@ -1,5 +1,5 @@
 <?php
-$url = 'https://api.parse.com/1/functions/getStartups';
+$url = 'https://api.parse.com/1/functions/getAssignments';
 $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
 $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
 $headers = array(
@@ -8,13 +8,6 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
-$industry = $_POST["industry"];
-$tags = $_POST["tags"];
-$email = $_POST["email"];
-$data =  array(industry => $industry, tags => $tags);
-$objectData = json_encode($data);
-echo $email;
-echo $objectData;
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -24,7 +17,6 @@ curl_setopt($rest,CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($rest,CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($rest);
 $decoded = json_decode($response, true);
-//$first = array_shift($decoded);
 curl_close($rest);
 
 ?>
@@ -106,76 +98,34 @@ curl_close($rest);
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Evaluator Questionnaire</h1>
+                <h1>To be assigned</h1>
             </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <p class="lead"><?php echo $first ?></p>
-            <form action="submit.php" method="post">
+            <form action="submit_assignments.php" method="post">
               <table class="table" id="table">
                   <thead>
                       <tr>
-                          <th data-field="name">Startup Name</th>
-                          <th data-field="biz">Business Evaluator</th>
-                          <th data-field="product">Product Evaluator</th>
-                          <th data-field="tech">Tech Evaluator</th>
-                          <th data-field="tech">Cancel choice</th>
+                          <th data-field="email">Email</th>
+                          <th data-field="startups">Startups</th>
+                          <th data-field="product">Assigned</th>
                       </tr>
 
                       <?php
-
                       $jsonIterator = new RecursiveIteratorIterator(
                           new RecursiveArrayIterator(array_values($decoded)[0]),
                           RecursiveIteratorIterator::SELF_FIRST);
 
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
-
-
-
                           echo "<tr>";
-                          echo "<td>$val[Name]</td>";
-                          if ($val[Biz] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='biz'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
-                          if ($val[Product] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='product'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
-                          if ($val[Tech] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='tech'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
-
-                          echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
+                          echo "<td>$val[Email]</td>";
+                          echo "<td>$val[Startups]</td>";
+                          echo "<td><input type='checkbox' name='assignments[]' value='$val[Id]'></td>";
                           echo "</tr>";
-
-                          // echo "<tr>";
-                          // echo "<td>$val[Name]</td>";
-                          // if ($val[Biz] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='biz'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          // if ($val[Product] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='product'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          // if ($val[Tech] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='tech'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          //
-                          // echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
-                          // echo "</tr>";
                         }
                       }
                       ?>
@@ -183,11 +133,8 @@ curl_close($rest);
               </table>
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Update</button>
             </form>
-
-
-
 
           </div>
         </div>
