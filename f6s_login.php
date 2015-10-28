@@ -38,9 +38,9 @@
 
 <body>
 
+
     <!-- Navigation -->
     <?php include 'navbar.php'; ?>
-
 
     <!-- Page Content -->
     <div class="container">
@@ -51,22 +51,16 @@
             </div>
         </div>
 
-        <br>
-
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <p class="lead">[Some information about the questionnaire.] We will ask you a few questions in order to best match the startups to your expertise. To begin, please enter your email address.</p>
-          </div>
-        </div>
-
-        <br>
-
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
-            <form action="your_expertise.php" method="post">
+            <form action="handle_f6s_login.php" method="post">
+              <div class="form-group">
                 <input type="text" class="form-control" name="email" placeholder="Enter you email address">
-                <br>
-                <button type="submit" class="btn btn-primary center-block">Start</button>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Enter your password">
+              </div>
+              <button type="submit" class="btn btn-primary">Next</button>
             </form>
 
 

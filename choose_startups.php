@@ -13,8 +13,8 @@ $tags = $_POST["tags"];
 $email = $_POST["email"];
 $data =  array(industry => $industry, tags => $tags);
 $objectData = json_encode($data);
-echo $email;
-echo $objectData;
+//echo $email;
+//echo $objectData;
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -53,6 +53,12 @@ curl_close($rest);
     }
     </style>
 
+    <style>
+    /*button that appears only on row hover*/
+      button.custom{visibility:hidden}
+      tr:hover button.custom{visibility:visible}
+    </style>
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/bootstrap-tokenfield.css">
 
@@ -70,36 +76,7 @@ curl_close($rest);
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -111,19 +88,22 @@ curl_close($rest);
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-8 col-md-offset-2">
             <p class="lead"><?php echo $first ?></p>
             <form action="submit.php" method="post">
               <table class="table" id="table">
                   <thead>
-                      <tr>
-                          <th data-field="name">Startup Name</th>
-                          <th data-field="biz">Business Evaluator</th>
-                          <th data-field="product">Product Evaluator</th>
-                          <th data-field="tech">Tech Evaluator</th>
-                          <th data-field="tech">Cancel choice</th>
-                      </tr>
 
+                      <tr>
+                          <th data-field="name">Name</th>
+                          <th data-field="tagline">Tagline</th>
+                          <th data-field="biz">Business</th>
+                          <th align='center' data-field="product">Product</th>
+                          <th align='center' data-field="tech">Tech</th>
+                          <th align='center' data-field="tech"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
                       <?php
 
                       $jsonIterator = new RecursiveIteratorIterator(
@@ -137,53 +117,38 @@ curl_close($rest);
 
                           echo "<tr>";
                           echo "<td>$val[Name]</td>";
+                          echo "<td>$val[Tagline]</td>";
+
                           if ($val[Biz] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='biz'/></td>";
+                              echo "<td align='center'><input type='radio' name='$val[Id]' value='biz'/></td>";
                           } else {
                               echo "<td></td>";
                           }
                           if ($val[Product] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='product'/></td>";
+                              echo "<td align='center'><input type='radio' name='$val[Id]' value='product'/></td>";
                           } else {
                               echo "<td></td>";
                           }
                           if ($val[Tech] == "0") {
-                              echo "<td><input type='radio' name='$val[Id]' value='tech'/></td>";
+                              echo "<td align='center'><input type='radio' name='$val[Id]' value='tech'/></td>";
                           } else {
                               echo "<td></td>";
                           }
 
-                          echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
+                          //echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
+                          echo "<td><button type='button' class='btn btn-default btn-sm custom' onclick='clearRadioGroup(\"$val[Id]\")'>Clear</button></td>";
+
                           echo "</tr>";
 
-                          // echo "<tr>";
-                          // echo "<td>$val[Name]</td>";
-                          // if ($val[Biz] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='biz'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          // if ($val[Product] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='product'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          // if ($val[Tech] == "0") {
-                          //     echo "<td><input type='radio' name='$val[Id]' value='tech'/></td>";
-                          // } else {
-                          //     echo "<td><input type='radio' disabled /></td>";
-                          // }
-                          //
-                          // echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
-                          // echo "</tr>";
                         }
                       }
                       ?>
-                  </thead>
+                  </tbody>
+
               </table>
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary center-block">Submit</button>
             </form>
 
 

@@ -19,7 +19,7 @@ $email = $_POST["email"];
 
 foreach($_POST as $key => $value)
 {
-  echo $key;
+  //echo $key;
 
   if (strstr($value, 'biz')) {
     array_push($biz, $key);
@@ -34,7 +34,7 @@ foreach($_POST as $key => $value)
 $final_submission =  array(email => $email, biz => $biz, product => $product, tech => $tech);
 $objectData = json_encode($final_submission);
 
-echo $objectData;
+//echo $objectData;
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -90,36 +90,7 @@ curl_close($rest);
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <!-- Page Content -->
     <div class="container">

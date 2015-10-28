@@ -1,23 +1,41 @@
 <?php
-$url = 'https://api.parse.com/1/functions/getAssignments';
-$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
-$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
-$headers = array(
- "Content-Type: application/json",
- "X-Parse-Application-Id: " . $appId,
- "X-Parse-REST-API-Key: " . $restKey
-);
 
-$rest = curl_init();
-curl_setopt($rest,CURLOPT_URL,$url);
-curl_setopt($rest,CURLOPT_POST,1);
-curl_setopt($rest,CURLOPT_POSTFIELDS,$objectData);
-curl_setopt($rest,CURLOPT_HTTPHEADER,$headers);
-curl_setopt($rest,CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($rest,CURLOPT_RETURNTRANSFER, true);
-$response = curl_exec($rest);
-$decoded = json_decode($response, true);
-curl_close($rest);
+require 'vendor/autoload.php';
+use Parse\ParseClient;
+use Parse\ParseUser;
+
+session_start();
+
+ParseClient::initialize('XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP', 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY', 'hMaVrHtAn7YZB0Gmtvr0xKxj5DPILRlNRUHqaIQG');
+
+$currentUser = ParseUser::getCurrentUser();
+if ($currentUser) {
+  // do stuff with the user
+  $url = 'https://api.parse.com/1/functions/getAssignments';
+  $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
+  $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
+  $headers = array(
+   "Content-Type: application/json",
+   "X-Parse-Application-Id: " . $appId,
+   "X-Parse-REST-API-Key: " . $restKey
+  );
+
+  $rest = curl_init();
+  curl_setopt($rest,CURLOPT_URL,$url);
+  curl_setopt($rest,CURLOPT_POST,1);
+  curl_setopt($rest,CURLOPT_POSTFIELDS,$objectData);
+  curl_setopt($rest,CURLOPT_HTTPHEADER,$headers);
+  curl_setopt($rest,CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($rest,CURLOPT_RETURNTRANSFER, true);
+  $response = curl_exec($rest);
+  $decoded = json_decode($response, true);
+  curl_close($rest);
+  //echo $response;
+} else {
+  // show the signup or login page
+  header("Location: f6s_login.php");
+  die();
+}
 
 ?>
 
@@ -62,36 +80,7 @@ curl_close($rest);
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -111,30 +100,79 @@ curl_close($rest);
                       <tr>
                           <th data-field="email">Email</th>
                           <th data-field="startups">Startups</th>
-                          <th data-field="product">Assigned</th>
+                          <th data-field="assigned">Assigned</th>
                       </tr>
 
                       <?php
+
                       $jsonIterator = new RecursiveIteratorIterator(
                           new RecursiveArrayIterator(array_values($decoded)[0]),
                           RecursiveIteratorIterator::SELF_FIRST);
-
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
-                          echo "<tr>";
-                          echo "<td>$val[Email]</td>";
-                          echo "<td>$val[Startups]</td>";
-                          echo "<td><input type='checkbox' name='assignments[]' value='$val[Id]'></td>";
-                          echo "</tr>";
+                          if (array_key_exists("Assigned",$val)) {
+                            $assigned = filter_var($val[Assigned], FILTER_VALIDATE_BOOLEAN);
+                            if ($assigned == false) {
+                              echo "<tr>";
+                              echo "<td>$val[Email]</td>";
+                              echo "<td>$val[Startups]</td>";
+                              echo "<td><input type='checkbox' name='assignments[]' value='$val[Id]'></td>";
+                              echo "</tr>";
+                            }
+                          }
                         }
                       }
                       ?>
                   </thead>
               </table>
-
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-              <button type="submit" class="btn btn-primary">Update</button>
+              <button type="submit" class="btn btn-primary pull-right">Update</button>
             </form>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Assigned</h1>
+                </div>
+            </div>
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th data-field="email">Email</th>
+                        <th data-field="startups">Startups</th>
+                        <th data-field="assigned">Date Assigned</th>
+                    </tr>
+
+                    <?php
+
+                    $jsonIterator = new RecursiveIteratorIterator(
+                        new RecursiveArrayIterator(array_values($decoded)[0]),
+                        RecursiveIteratorIterator::SELF_FIRST);
+                    foreach ($jsonIterator as $key => $val) {
+                      if (is_array($val)) {
+                        if (array_key_exists("Assigned",$val)) {
+                          $assigned = filter_var($val[Assigned], FILTER_VALIDATE_BOOLEAN);
+                          if ($assigned == true) {
+
+                            echo "<tr>";
+                            echo "<td>$val[Email]</td>";
+                            echo "<td>$val[Startups]</td>";
+                            echo "<td>$val[PrettyDate]</td>";
+                            echo "</tr>";
+                          }
+                        }
+                      }
+                    }
+                    ?>
+                </thead>
+            </table>
+
 
           </div>
         </div>
