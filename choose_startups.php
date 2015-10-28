@@ -91,7 +91,7 @@ curl_close($rest);
           <div class="col-md-8 col-md-offset-2">
             <p class="lead"><?php echo $first ?></p>
             <form action="submit.php" method="post">
-              <table class="table" id="table">
+              <table class="table table-hover" id="table">
                   <thead>
 
                       <tr>
@@ -146,9 +146,10 @@ curl_close($rest);
                   </tbody>
 
               </table>
+              <?php include 'startup_choice_footer.php'; ?>
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-              <button type="submit" class="btn btn-primary center-block">Submit</button>
+              <button type="submit" class="btn btn-primary center-block" style="">Submit</button>
             </form>
 
 
@@ -158,6 +159,7 @@ curl_close($rest);
         </div>
 
     </div>
+
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
