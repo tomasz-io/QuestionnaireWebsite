@@ -1,12 +1,14 @@
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <ul class="nav navbar-nav navbar-left">
-          <li><h2 navbar-text>Here we display "2/25 startups"</h2></li>
-        </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><button type="submit" class="btn btn-default center-block" style="">Submit</button></li>
-      </ul>
+    <div class="row">
+    <div class="col-sm-10">
+<h2 class="navbar-text"><span id="evalcount">0</span>/<span id="totevalcount">25</span> startups selected</h2>
+</div>
+<div class="col-sm-2">
+<form class="navbar-form navbar-right" role="submit">
+<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
+</div>
+      </div>
     </div>
-    <!-- /.container -->
 </nav>
