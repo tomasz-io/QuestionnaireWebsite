@@ -75,6 +75,8 @@ curl_close($rest);
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/bootstrap-tokenfield.css">
+    <link href="css/custom.css" rel="stylesheet">
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -93,17 +95,34 @@ curl_close($rest);
     <?php include 'navbar.php'; ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container jumbotron">
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Some thank you message</h1>
+                <h1>Done! What now?</h1>
             </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <p class="lead">Some information: you'll get an email soon with your chosen startups etc.</p>
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p class="lead"><u>Within 24 hours</u>, you should receive an email from f6s.com</p>
+          </div>
+          <div class="col-md-8 col-md-offset-2">
+          <br>
+          <p>While you wait...</p>
+          <p>Read the Evaluator's Guide to understand it works and how to rate the startups</p> 
+          <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
+          </div>
+          <div class="col-md-8 col-md-offset-2">
+              <hr>
+              <small>
+              <h4>Didn't get the email?</h4>
+              <ul>
+                <li>Check your promotions/social/spam folders for any emails from <u>donotreply@f6s.com</u></li>
+                <li>Make sure you're checking the right inbox and not "that other one" :-)</li>
+                <li>If all else fails, shoot an email to <a href="mailto:tomasz.s@numa.co">tomasz.s@numa.co</a></li>
+              </ul>
+              </div>
           </div>
         </div>
 
