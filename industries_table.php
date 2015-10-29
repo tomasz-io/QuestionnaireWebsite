@@ -39,10 +39,12 @@
   </table>
   <br>
   <br>
-  <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
+  <p class="lead">List all the tags relevant to your area of expertise.</p>
+  <p>The more tags you provide, the better we can select the right startups for you!</p>
+  <div class="input-group input-group-lg col-sm-12">
   <input type="text" class="form-control" id="tokenfield" name="tags" placeholder="Enter as many tags as you want"/>
   <input type="hidden" name="email" value='.$email.' >
-  <br>
-  <button type="submit" class="btn btn-primary pull-right">Next</button>
+  <button type="submit" class="btn btn-lg btn-primary pull-right">Next</button>
 
+  </div>
 </form>
