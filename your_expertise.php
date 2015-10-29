@@ -1,4 +1,5 @@
 <?php
+
 $url = 'https://api.parse.com/1/functions/emailCheck';
 $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
 $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
@@ -112,23 +113,27 @@ curl_close($rest);
 
   <input type="hidden" name="email" value=$_POST['email']>
 
+
+
+    <?php include 'get_tags.php'; ?>
     <script>
       $('#tokenfield').tokenfield({
         autocomplete: {
-          source: ['UX','UI','IoT','mobile','social','tourism','algorithms','B2B','B2C'],
+          source: "<?php echo $js_tags; ?>",
           delay: 100
         },
         showAutocompleteOnFocus: true
       })
     </script>
 
-    <!-- <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
+
+    <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
     <form action="choose_startups.php" method="post">
         <input type="text" class="form-control" id="tokenfield" name="tags" placeholder="Enter as many tags as you want"/>
         <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
         <br>
         <button type="submit" class="btn btn-primary">Next</button>
-    </form> -->
+    </form>
 
 
 </body>
