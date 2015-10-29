@@ -8,10 +8,11 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
+$expertise = $_POST["expertise"];
 $industry = $_POST["industry"];
 $tags = $_POST["tags"];
 $email = $_POST["email"];
-$data =  array(industry => $industry, tags => $tags);
+$data =  array(expertise => $expertise, industry => $industry, tags => $tags);
 $objectData = json_encode($data);
 //echo $email;
 //echo $objectData;
@@ -88,7 +89,7 @@ curl_close($rest);
                 <h1>Select startups to evaluate</h1>
                 <p class="lead">They're ordered by proximity to your field of expertise</p>
             </div>
-            <div class="col-md-10 col-md-push-1">
+            <!-- <div class="col-md-10 col-md-push-1">
               <div class="panel panel-info" id="infobox">
                     <div class="panel-heading">What expertise should you select?</div>
                       <div class="panel-body">
@@ -97,7 +98,7 @@ curl_close($rest);
                       <p><strong>Tech</strong>: you act as Programming / Engineering / Scientific expert</p>
                       </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="row">
@@ -165,6 +166,8 @@ curl_close($rest);
               <?php include 'startup_choice_footer.php'; ?>
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
+              <input type="hidden" name="expertise" value="<?php echo $_POST['expertise']; ?>">
+
               <button type="submit" class="btn btn-primary center-block" style="">Submit</button>
             </form>
           </div>

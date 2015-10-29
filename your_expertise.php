@@ -68,7 +68,6 @@ curl_close($rest);
 
     <!-- Page Content -->
     <div class="container jumbotron">
-
         <div class="row">
             <div class="col-lg-12 text-center">
 
@@ -80,7 +79,6 @@ curl_close($rest);
               }
               ?>
 
-
             </div>
         </div>
         <div class="row">
@@ -88,7 +86,7 @@ curl_close($rest);
 
             <?php
             if($decoded['result']) {
-              include 'industries_table.php';
+              include 'expertise_form.php';
             } else {
               include 'email_fail.php';
             }
@@ -139,11 +137,6 @@ curl_close($rest);
         showAutocompleteOnFocus: true
       })
     </script> -->
-
-
-    <!-- <p class="lead">List all the tags relevant to your area of expertise. The more tags you provide, the better we can select the right startups for you!</p>
-        <input type="text" class="form-control" id="tokenfield" name="tags" placeholder="Enter as many tags as you want"/> -->
-
 
 </body>
 
