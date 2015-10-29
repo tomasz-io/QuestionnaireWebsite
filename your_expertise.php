@@ -145,13 +145,10 @@ curl_close($rest);
 
                 </form>';
             } else {
-              echo  '
-                    <p class="lead">We didn\'t recognise this email address. Please try a different one or get in touch at [contact info here]</p>
-                    <br>
-                    <button class="btn btn-primary" onclick="history.go(-1);">Back</button>
-              ';
+              include 'email_fail.php';
             }
             ?>
+
           <!-- Empty space -->
             <div class="col-xs-12" style="height:300px;"></div>
           </div>
