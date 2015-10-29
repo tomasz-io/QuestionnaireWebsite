@@ -110,7 +110,7 @@ curl_close($rest);
           <div class="col-md-8 col-md-offset-2">
           <br>
           <p>While you wait...</p>
-          <p>Read the Evaluator's Guide to understand it works and how to rate the startups</p> 
+          <p>Read the Evaluator's Guide to understand the process and how to rate the startups</p> 
           <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
           </div>
           <div class="col-md-8 col-md-offset-2">
