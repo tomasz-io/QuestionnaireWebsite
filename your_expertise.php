@@ -46,16 +46,9 @@ curl_close($rest);
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
-
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/bootstrap-tokenfield.css">
-
+    <link rel="stylesheet" href="css/custom.css"></style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -101,7 +94,7 @@ curl_close($rest);
             ?>
 
           <!-- Empty space -->
-            <div class="col-xs-12" style="height:300px;"></div>
+<!--             <div class="col-xs-12" style="height:300px;"></div> -->
           </div>
         </div>
     </div>
