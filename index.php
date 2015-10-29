@@ -51,9 +51,6 @@
                 <h1>Evaluator Sign Up</h1>
             </div>
         </div>
-
-        <br>
-
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
             <p class="lead">First, let's check that you're in our database</p>

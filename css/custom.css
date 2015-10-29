@@ -1,6 +1,7 @@
-#table input[type=radio] {
-	
-}
+body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
 
 #infobox {
 	text-align: left;
@@ -10,3 +11,8 @@ nav {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+h1 {
+	margin-bottom: 0.5em;
+}
+
