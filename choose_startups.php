@@ -46,6 +46,8 @@ curl_close($rest);
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
     <style>
     body {
         padding-top: 70px;
@@ -174,14 +176,12 @@ curl_close($rest);
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-    <script src="js/bootstrap-tokenfield.js"></script>
+    <script type="text/javascript" src="js/bootstrap-tokenfield.js"></script>
 
 
     <script>
@@ -193,6 +193,8 @@ curl_close($rest);
     }
     </script>
 
+    <!--counter update js-->
+    <script type="text/javascript" src="js/eval-counter.js"></script>
 
 
 </body>
