@@ -82,13 +82,24 @@ curl_close($rest);
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Evaluator Questionnaire</h1>
+            <div class="col-md-10 col-md-push-1 text-center">
+                <h1>Select startups to evaluate</h1>
+                <p class="lead">They're ordered by proximity to your field of expertise</p>
+            </div>
+            <div class="col-md-10 col-md-push-1">
+              <div class="panel panel-info" id="infobox">
+                    <div class="panel-heading">What expertise should you select?</div>
+                      <div class="panel-body">
+                      <p><strong>Business</strong>: you act as Business / Financial / Investments expert</p>
+                      <p><strong>Product</strong>: you act as Product Strategy / UX / Design / Communication / Marketing expert</p>
+                      <p><strong>Tech</strong>: you act as Programming / Engineering / Scientific expert</p>
+                      </div>
+                </div>
             </div>
         </div>
 
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-10 col-md-offset-1">
             <p class="lead"><?php echo $first ?></p>
             <form action="submit.php" method="post">
               <table class="table table-hover" id="table">
