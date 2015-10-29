@@ -15,6 +15,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
     <style>
     body {
         padding-top: 70px;
@@ -43,19 +44,19 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container jumbotron">
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Hello</h1>
+                <h1>Evaluator Sign Up</h1>
             </div>
         </div>
 
         <br>
 
         <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <p class="lead">[Some information about the questionnaire.] We will ask you a few questions in order to best match the startups to your expertise. To begin, please enter your email address.</p>
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <p class="lead">First, let's check that you're in our database</p>
           </div>
         </div>
 
@@ -64,9 +65,12 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
             <form action="your_expertise.php" method="post">
-                <input type="text" class="form-control" name="email" placeholder="Enter you email address">
-                <br>
-                <button type="submit" class="btn btn-primary center-block">Start</button>
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" name="email" placeholder="Your email">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary" type="button" style="border-top-left-radius: 0; border-bottom-left-radius: 0;">Start</button>
+                </span>
+                </div>
             </form>
 
 
