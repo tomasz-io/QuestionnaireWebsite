@@ -110,10 +110,10 @@ curl_close($rest);
                       <tr>
                           <th data-field="name">Name</th>
                           <th data-field="tagline">Tagline</th>
-                          <th data-field="biz">Business</th>
-                          <th align='center' data-field="product">Product</th>
+                          <th data-field="selected">Selected</th>
+                          <!-- <th align='center' data-field="product">Product</th>
                           <th align='center' data-field="tech">Tech</th>
-                          <th align='center' data-field="tech"></th>
+                          <th align='center' data-field="tech"></th> -->
                       </tr>
                   </thead>
                   <tbody>
@@ -131,25 +131,28 @@ curl_close($rest);
                           echo "<tr>";
                           echo "<td>$val[Name]</td>";
                           echo "<td>$val[Tagline]</td>";
+                          echo "<td align='center'><input type='checkbox' name='selected' value='$val[Id]'/></td>";
 
-                          if ($val[Biz] == "0") {
-                              echo "<td align='center'><input type='radio' name='$val[Id]' value='biz'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
-                          if ($val[Product] == "0") {
-                              echo "<td align='center'><input type='radio' name='$val[Id]' value='product'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
-                          if ($val[Tech] == "0") {
-                              echo "<td align='center'><input type='radio' name='$val[Id]' value='tech'/></td>";
-                          } else {
-                              echo "<td></td>";
-                          }
+                          // if ($val[Biz] == "0") {
+                          //
+                          // }
+
+                          // else {
+                          //     echo "<td></td>";
+                          // }
+                          // if ($val[Product] == "0") {
+                          //     echo "<td align='center'><input type='radio' name='$val[Id]' value='product'/></td>";
+                          // } else {
+                          //     echo "<td></td>";
+                          // }
+                          // if ($val[Tech] == "0") {
+                          //     echo "<td align='center'><input type='radio' name='$val[Id]' value='tech'/></td>";
+                          // } else {
+                          //     echo "<td></td>";
+                          // }
 
                           //echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
-                          echo "<td><button type='button' class='btn btn-default btn-sm custom' onclick='clearRadioGroup(\"$val[Id]\")'>Clear</button></td>";
+                          // echo "<td><button type='button' class='btn btn-default btn-sm custom' onclick='clearRadioGroup(\"$val[Id]\")'>Clear</button></td>";
 
                           echo "</tr>";
 
@@ -164,10 +167,6 @@ curl_close($rest);
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
               <button type="submit" class="btn btn-primary center-block" style="">Submit</button>
             </form>
-
-
-
-
           </div>
         </div>
 

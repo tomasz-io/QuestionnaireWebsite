@@ -12,7 +12,7 @@ try {
   // The object was retrieved successfully.
   $tags_array = $tags->get("tagsArray");
   $js_tags = json_encode($tags_array);
-  echo $js_tags;
+  //echo $js_tags;
 } catch (ParseException $ex) {
   // The object was not retrieved successfully.
   // error is a ParseException with an error code and message.
