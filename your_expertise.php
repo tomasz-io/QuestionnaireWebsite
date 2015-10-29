@@ -73,7 +73,7 @@ curl_close($rest);
     <?php include 'navbar.php'; ?>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container jumbotron">
 
         <div class="row">
             <div class="col-lg-12 text-center">
