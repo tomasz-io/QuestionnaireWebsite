@@ -16,9 +16,9 @@
     <p class="lead">How many startups will you evaluate?</p>
 
   <div class="radio">
-    <label class="radio-inline"><input type="radio" name="startupnum" value="a">5</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="b">10</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="c">15</label>
+    <label class="radio-inline"><input type="radio" name="startupnum" value="5">5</label>
+    <label class="radio-inline"><input type="radio" name="startupnum" value="10">10</label>
+    <label class="radio-inline"><input type="radio" name="startupnum" value="15">15</label>
   </div>
   <br>
 

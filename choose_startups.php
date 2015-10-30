@@ -90,16 +90,6 @@ curl_close($rest);
                 <h1>Select startups to evaluate</h1>
                 <p class="lead">They're ordered by proximity to your field of expertise</p>
             </div>
-            <!-- <div class="col-md-10 col-md-push-1">
-              <div class="panel panel-info" id="infobox">
-                    <div class="panel-heading">What expertise should you select?</div>
-                      <div class="panel-body">
-                      <p><strong>Business</strong>: you act as Business / Financial / Investments expert</p>
-                      <p><strong>Product</strong>: you act as Product Strategy / UX / Design / Communication / Marketing expert</p>
-                      <p><strong>Tech</strong>: you act as Programming / Engineering / Scientific expert</p>
-                      </div>
-                </div>
-            </div> -->
         </div>
 
         <div class="row">
@@ -113,9 +103,6 @@ curl_close($rest);
                           <th data-field="name">Name</th>
                           <th data-field="tagline">Tagline</th>
                           <th data-field="selected">Selected</th>
-                          <!-- <th align='center' data-field="product">Product</th>
-                          <th align='center' data-field="tech">Tech</th>
-                          <th align='center' data-field="tech"></th> -->
                       </tr>
                   </thead>
                   <tbody>
@@ -135,28 +122,6 @@ curl_close($rest);
                           echo "<td>$val[Name]</td>";
                           echo "<td>$val[Tagline]</td>";
                           echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]'/></td>";
-
-                          // if ($val[Biz] == "0") {
-                          //
-                          // }
-
-                          // else {
-                          //     echo "<td></td>";
-                          // }
-                          // if ($val[Product] == "0") {
-                          //     echo "<td align='center'><input type='radio' name='$val[Id]' value='product'/></td>";
-                          // } else {
-                          //     echo "<td></td>";
-                          // }
-                          // if ($val[Tech] == "0") {
-                          //     echo "<td align='center'><input type='radio' name='$val[Id]' value='tech'/></td>";
-                          // } else {
-                          //     echo "<td></td>";
-                          // }
-
-                          //echo "<td><input type='button' class='btn btn-default btn-sm' value='Clear' onclick='clearRadioGroup(\"$val[Id]\")'></td>";
-                          // echo "<td><button type='button' class='btn btn-default btn-sm custom' onclick='clearRadioGroup(\"$val[Id]\")'>Clear</button></td>";
-
                           echo "</tr>";
 
                         }
@@ -199,6 +164,7 @@ curl_close($rest);
     </script>
 
     <!--counter update js-->
+    <script type="text/javascript">var toteval = "<?php echo $_POST['startupnum'] ?>";</script>
     <script type="text/javascript" src="js/eval-counter.php"></script>
 
 
