@@ -1,6 +1,6 @@
 var counter = 0;
 // var toteval = 20;
-// var toteval = <?php echo $startupnumber; ?>
+var toteval = <?php echo 15 ?>;
 
 function init () {
 	console.log("initialising counter")

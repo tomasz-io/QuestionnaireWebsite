@@ -109,8 +109,6 @@ curl_close($rest);
 
     <script src="js/bootstrap-tokenfield.js"></script>
 
-  <input type="hidden" name="email" value=$_POST['email']>
-
 
 
 

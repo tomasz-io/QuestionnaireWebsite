@@ -12,6 +12,7 @@ $startupnumber = $_POST["startupnum"];
 $industry = $_POST["industry"];
 $tags = $_POST["tags"];
 $email = $_POST["email"];
+//echo $email;
 $data =  array(expertise => $expertise, industry => $industry, tags => $tags);
 $objectData = json_encode($data);
 //echo $email;

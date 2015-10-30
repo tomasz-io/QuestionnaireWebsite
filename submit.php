@@ -8,35 +8,10 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
-// $biz = $_POST["biz"];
-// $product = $_POST["product"];
-// $tech = $_POST["tech"];
-
-// $biz = array();
-// $product = array();
-// $tech = array();
-
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
 $email = $_POST["email"];
 
-echo $email;
-echo $expertise;
-//echo $selected;
-
-// foreach($_POST as $key => $value)
-// {
-//   //echo $key;
-//
-//   if (strstr($value, 'biz')) {
-//     array_push($biz, $key);
-//   } else if ($value == 'product') {
-//     array_push($product, $key);
-//   } else if ($value == 'tech') {
-//     array_push($tech, $key);
-//   }
-//
-// }
 
 $final_submission =  array(selected => $selected, expertise => $expertise, email => $email);
 $objectData = json_encode($final_submission);
@@ -112,16 +87,12 @@ curl_close($rest);
 
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <p class="lead"><u>Within 24 hours</u>, you should receive an email from f6s.com</p>
+            <p class="lead">Within 24 hours, you should receive an email from f6s.com</p>
           </div>
           <div class="col-md-8 col-md-offset-2">
           <br>
           <p>While you wait...</p>
-<<<<<<< HEAD
-          <p>Read the Evaluator's Guide to understand how it works and how to rate the startups</p>
-=======
-          <p>Read the Evaluator's Guide to understand the process and how to rate the startups</p> 
->>>>>>> origin/master
+          <p>Read the Evaluator's Guide to understand the process and how to rate the startups</p>
           <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
           </div>
           <div class="col-md-8 col-md-offset-2">
