@@ -7,8 +7,8 @@ $headers = array(
  "X-Parse-Application-Id: " . $appId,
  "X-Parse-REST-API-Key: " . $restKey
 );
-
 $expertise = $_POST["expertise"];
+$startupnumber = $_POST["startupnum"];
 $industry = $_POST["industry"];
 $tags = $_POST["tags"];
 $email = $_POST["email"];
@@ -198,7 +198,7 @@ curl_close($rest);
     </script>
 
     <!--counter update js-->
-    <script type="text/javascript" src="js/eval-counter.js"></script>
+    <script type="text/javascript" src="js/eval-counter.php"></script>
 
 
 </body>
