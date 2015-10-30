@@ -12,26 +12,33 @@ $headers = array(
 // $product = $_POST["product"];
 // $tech = $_POST["tech"];
 
-$biz = array();
-$product = array();
-$tech = array();
+// $biz = array();
+// $product = array();
+// $tech = array();
+
+$selected = $_POST["selected"];
+$expertise = $_POST["expertise"];
 $email = $_POST["email"];
 
-foreach($_POST as $key => $value)
-{
-  //echo $key;
+echo $email;
+echo $expertise;
+//echo $selected;
 
-  if (strstr($value, 'biz')) {
-    array_push($biz, $key);
-  } else if ($value == 'product') {
-    array_push($product, $key);
-  } else if ($value == 'tech') {
-    array_push($tech, $key);
-  }
+// foreach($_POST as $key => $value)
+// {
+//   //echo $key;
+//
+//   if (strstr($value, 'biz')) {
+//     array_push($biz, $key);
+//   } else if ($value == 'product') {
+//     array_push($product, $key);
+//   } else if ($value == 'tech') {
+//     array_push($tech, $key);
+//   }
+//
+// }
 
-}
-
-$final_submission =  array(email => $email, biz => $biz, product => $product, tech => $tech);
+$final_submission =  array(selected => $selected, expertise => $expertise, email => $email);
 $objectData = json_encode($final_submission);
 
 //echo $objectData;
@@ -110,7 +117,7 @@ curl_close($rest);
           <div class="col-md-8 col-md-offset-2">
           <br>
           <p>While you wait...</p>
-          <p>Read the Evaluator's Guide to understand it works and how to rate the startups</p> 
+          <p>Read the Evaluator's Guide to understand how it works and how to rate the startups</p>
           <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
           </div>
           <div class="col-md-8 col-md-offset-2">
@@ -136,20 +143,6 @@ curl_close($rest);
     <script src="js/bootstrap.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-    <script src="js/bootstrap-tokenfield.js"></script>
-
-
-    <script>
-      $('#tokenfield').tokenfield({
-        autocomplete: {
-          source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
-          delay: 100
-        },
-        showAutocompleteOnFocus: true
-      })
-    </script>
-
 
 
 </body>

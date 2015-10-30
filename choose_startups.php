@@ -118,6 +118,7 @@ curl_close($rest);
                       </tr>
                   </thead>
                   <tbody>
+
                       <?php
 
                       $jsonIterator = new RecursiveIteratorIterator(
@@ -132,7 +133,7 @@ curl_close($rest);
                           echo "<tr>";
                           echo "<td>$val[Name]</td>";
                           echo "<td>$val[Tagline]</td>";
-                          echo "<td align='center'><input type='checkbox' name='selected' value='$val[Id]'/></td>";
+                          echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]'/></td>";
 
                           // if ($val[Biz] == "0") {
                           //
@@ -163,12 +164,13 @@ curl_close($rest);
                   </tbody>
 
               </table>
-              <?php include 'startup_choice_footer.php'; ?>
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
               <input type="hidden" name="expertise" value="<?php echo $_POST['expertise']; ?>">
 
-              <button type="submit" class="btn btn-primary center-block" style="">Submit</button>
+              <?php include 'startup_choice_footer.php'; ?>
+
+              <!-- <button type="submit" class="btn btn-primary center-block" style="">Submit</button> -->
             </form>
           </div>
         </div>

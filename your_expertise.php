@@ -127,7 +127,7 @@ curl_close($rest);
     })
   </script>
 
-    <!--
+
     <script>
       $('#tokenfield').tokenfield({
         autocomplete: {
@@ -136,7 +136,7 @@ curl_close($rest);
         },
         showAutocompleteOnFocus: true
       })
-    </script> -->
+    </script>
 
 </body>
 
