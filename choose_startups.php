@@ -28,6 +28,7 @@ $response = curl_exec($rest);
 $decoded = json_decode($response, true);
 //$first = array_shift($decoded);
 curl_close($rest);
+//echo $response;
 
 ?>
 

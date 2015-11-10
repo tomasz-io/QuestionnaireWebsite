@@ -93,7 +93,7 @@ curl_close($rest);
             ?>
 
           <!-- Empty space -->
-<!--             <div class="col-xs-12" style="height:300px;"></div> -->
+            <div class="col-xs-12" style="height:300px;"></div>
           </div>
         </div>
     </div>
