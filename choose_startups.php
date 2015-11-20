@@ -117,8 +117,6 @@ curl_close($rest);
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
 
-
-
                           echo "<tr>";
                           echo "<td>$val[Name]</td>";
                           echo "<td>$val[Tagline]</td>";

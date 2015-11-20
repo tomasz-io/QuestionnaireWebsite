@@ -85,18 +85,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-    <script src="js/bootstrap-tokenfield.js"></script>
-
-
-    <script>
-      $('#tokenfield').tokenfield({
-        autocomplete: {
-          source: ['UX','UI','IoT','mobile','social','tourism','algorithms','B2B','B2C'],
-          delay: 100
-        },
-        showAutocompleteOnFocus: true
-      })
-    </script>
 
 
 

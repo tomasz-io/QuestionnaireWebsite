@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.numa.paris/Sprint"><img style="max-width:90px;max-height:90px; margin-top: -12px;" alt="NUMA Sprint" src="images/logo_small.png"></a>
+            <a class="navbar-brand" href="http://www.numa.co"><img style="max-width:120px;max-height:120px; margin-top: 0px;" alt="NUMA" src="images/logo_small.png"></a>
         </div>
     </div>
     <!-- /.container -->
