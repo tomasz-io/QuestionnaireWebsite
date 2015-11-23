@@ -96,7 +96,7 @@ if(!$valid){
             <?php
             if($decoded['result']) {
               echo "<h1>Hello $first_name</h1>";
-              echo "<p>We prefilled some of your information for you, but please check if it's still correct.</p>";
+              echo "<p>Let's find the startups that match best with your profile</p>";
               echo "<br>";
               include 'expertise_form.php';
             }

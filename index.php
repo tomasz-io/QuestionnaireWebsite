@@ -48,12 +48,13 @@
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Evaluator Sign Up</h1>
+                <h1>Let's start!</h1>
             </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <p class="lead">First, let's check that you're in our database</p>
+            <p class="lead">Thanks for your help, it means a lot to us!<br> 
+            First, we'll check that you're in our database</p>
           </div>
         </div>
 

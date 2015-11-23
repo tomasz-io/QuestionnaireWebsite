@@ -3,18 +3,18 @@
   <h4>What's your main area of expertise?*</h4>
 
   <div class="radio">
-    <label><input type="radio" name="expertise" value="biz" required="" title="What's your main area of expertise?">Business / Financial / Investments</label>
+    <label><input type="radio" name="expertise" value="biz" required="" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
   </div>
   <div class="radio">
     <label><input type="radio" name="expertise" value="product">Product Strategy / UX / Design / Communication / Marketing</label>
   </div>
   <div class="radio">
-    <label><input type="radio" name="expertise" value="tech">Programming / Engineering / Scientific</label>
+    <label><input type="radio" name="expertise" value="tech">Tech / Programming / Engineering / Scientific</label>
   </div>
 
   <br>
 
-  <h4>What are your main industries?</h4>
+  <h4>What industries are you a specialist of?</h4>
 
 
   <?php
