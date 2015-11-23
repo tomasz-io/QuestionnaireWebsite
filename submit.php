@@ -10,13 +10,14 @@ $headers = array(
 
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
+$industry = $_POST['industry'];
+$tags = $_POST['tags'];
 $email = $_POST["email"];
 
-
-$final_submission =  array(selected => $selected, expertise => $expertise, email => $email);
+$final_submission =  array(selected => $selected, expertise => $expertise, industry => $industry, tags => $tags, email => $email);
 $objectData = json_encode($final_submission);
 
-//echo $objectData;
+echo $objectData;
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);

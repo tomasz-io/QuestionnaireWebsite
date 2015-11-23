@@ -132,6 +132,8 @@ curl_close($rest);
 
               <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
               <input type="hidden" name="expertise" value="<?php echo $_POST['expertise']; ?>">
+              <input type="hidden" name="industry" value="<?php echo $_POST['industry']; ?>">
+              <input type="hidden" name="tags" value="<?php echo $_POST['tags']; ?>">
 
               <?php include 'startup_choice_footer.php'; ?>
 
