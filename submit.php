@@ -10,9 +10,12 @@ $headers = array(
 
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
-$industry = $_POST['industry'];
 $tags = $_POST['tags'];
 $email = $_POST["email"];
+
+session_start();
+$industry = $_SESSION["industry"];
+echo $industry;
 
 $final_submission =  array(selected => $selected, expertise => $expertise, industry => $industry, tags => $tags, email => $email);
 $objectData = json_encode($final_submission);
