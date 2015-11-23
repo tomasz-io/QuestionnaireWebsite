@@ -19,3 +19,25 @@ h1 {
 #footer-counter {
 	color:#FFF;
 }
+
+.desc, .jumbotron .desc {
+	font-size: 1em;
+}
+
+.jumbotron h4, h4 {
+	margin-top: 3em;
+}
+
+#startupqty label {
+	margin-right: 1em;
+}
+
+#startupqty .level {
+	display: none;
+}
+
+input[value="5"]:checked ~ #lvl5, input[value="10"]:checked ~ #lvl10, input[value="15"]:checked ~ #lvl15, input[value="20"]:checked ~ #lvl20, input[value="25"]:checked ~ #lvl25, input[value="30"]:checked ~ #lvl30, input[value="35"]:checked ~ #lvl35, input[value="40"]:checked ~ #lvl40 {
+	display: block;
+} {
+	display: block;
+}

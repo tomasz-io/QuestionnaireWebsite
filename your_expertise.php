@@ -97,7 +97,6 @@ if(!$valid){
             if($decoded['result']) {
               echo "<h1>Hello $first_name</h1>";
               echo "<p>Let's find the startups that match best with your profile</p>";
-              echo "<br>";
               include 'expertise_form.php';
             }
             ?>

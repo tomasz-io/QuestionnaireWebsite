@@ -1,6 +1,6 @@
 <form action="choose_startups.php" method="post">
 
-  <h4>What's your main area of expertise?*</h4>
+  <h4>What's your main area of expertise?</h4>
 
   <div class="radio">
     <label><input type="radio" name="expertise" value="biz" required="" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
@@ -11,8 +11,6 @@
   <div class="radio">
     <label><input type="radio" name="expertise" value="tech">Tech / Programming / Engineering / Scientific</label>
   </div>
-
-  <br>
 
   <h4>What industries are you a specialist of?</h4>
 
@@ -58,32 +56,45 @@
       <?php endforeach; ?>
     </tbody>
   </table>
-
-  <br>
-  <br>
   <h4>List all the tags relevant to your area of expertise.</h4>
-  <p>The more tags you provide, the better we can select the right startups for you!</p>
+  <p class="desc">The more tags you provide, the better we can match you to startups!</p>
   <div class="input-group input-group-lg col-sm-12">
-    <input type="text" class="form-control test" id="tokenfield" name="tags" value="<?php echo implode(',',$user_tags); ?>" placeholder="Enter as many tags as you want"/>
+    <input type="text" class="form-control test" id="tokenfield" name="tags" value="<?php echo implode(',',$user_tags); ?>" placeholder="Use a comma to separate tags: advertising, conversion optimization, content marketing"/>
     <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
   </div>
 
-  <br>
-  <br>
-
-    <h4>How many startups will you evaluate?*</h4>
-
-  <div class="radio">
-    <label class="radio-inline"><input type="radio" name="startupnum" value="5" required="" title="How many startups will you evaluate?">5</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="10">10</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="15">15</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="15">20</label>
-    <label class="radio-inline"><input type="radio" name="startupnum" value="15">25</label>
-  </div>
-
-  <button type="submit" class="btn btn-lg btn-primary pull-right">Next</button>
-
-
+      <h4>How many startups will you evaluate?</h4>
+      <p class="desc">Expect to spend 15 minutes per evaluation</p>
+  
+    <div id="startupqty">
+      <input type="radio" name="startupnum" value="5" id="five">
+      <label for="five">5</label>
+      <input type="radio" name="startupnum" value="10" id="ten">
+      <label for="ten">10</label>
+      <input type="radio" name="startupnum" value="15" id="fifteen">
+      <label for="fifteen">15</label>
+      <input type="radio" name="startupnum" value="20" id="twenty">
+      <label for="twenty">20</label>
+      <input type="radio" name="startupnum" value="25" id="twentyfive">
+      <label for="twentyfive">25</label>
+      <input type="radio" name="startupnum" value="30" id="thirty">
+      <label for="thirty">30</label>
+      <input type="radio" name="startupnum" value="35" id="thirtyfive">
+      <label for="thirtyfive">35</label>
+      <input type="radio" name="startupnum" value="40" id="forty">
+      <label for="forty">40</label>
+      <div class="level" id="lvl5">Better than nothing, right?</div>
+      <div class="level" id="lvl10">That's a reasonable start</div>
+      <div class="level" id="lvl15">Good, that's very helpful!</div>
+      <div class="level" id="lvl20">Wow, we're pretty impressed!</div>
+      <div class="level" id="lvl25">You must be a veteran!</div>
+      <div class="level" id="lvl30">You really love startups! Don't you?</div>
+      <div class="level" id="lvl35">Ok, we owe you dinner :-)</div>
+      <div class="level" id="lvl40">Who are you!? Chuck Norris?</div>
+    </div>
+  
+    <button type="submit" class="btn btn-lg btn-primary pull-right">Next</button>
+  
 </form>
 
 <!-- THIS IS NOT A GOOD SOLUTION. THE ARRAY SHOULD COME FROM php FILE get_tags.php -->
