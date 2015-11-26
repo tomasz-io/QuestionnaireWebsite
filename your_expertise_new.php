@@ -99,7 +99,7 @@ if(!$valid){
 
             <?php
             if($decoded['result']) {
-              echo "<h1>Hello $first_name</h1>";
+              echo "<h1>Almost there!</h1>";
               echo "<p>Let's find the startups that match best with your profile</p>";
               include 'expertise_form.php';
             }
@@ -111,19 +111,6 @@ if(!$valid){
         </div>
     </div>
     <!-- /.container -->
-
-
-
-
-  <!-- <script>
-    var tags = ['art_&_design', 'education', 'fuck'];
-    for (var i = 0; i < tags.length; ++i) {
-      var element = $(document.getElementById(tags[i]));
-      if(element.is(":checkbox")) {
-        element.prop("checked", true);
-      }
-    }
-  </script> -->
 
 
 

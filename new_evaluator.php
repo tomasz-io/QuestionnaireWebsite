@@ -39,10 +39,10 @@ if(!$valid){
   header("Location: email_fail.php");
 } else if ($valid){
   if(!$complete){
-    header("Location: new_evaluator.php");
-  } else if ($complete){
     // stay on this page
-  }
+    // header("Location: new_evaluator.php");
+  } else if ($complete){
+    header("Location: your_expertise.php");  }
 }
 ?>
 <!DOCTYPE html>
@@ -99,9 +99,9 @@ if(!$valid){
 
             <?php
             if($decoded['result']) {
-              echo "<h1>Hello $first_name</h1>";
-              echo "<p>Let's find the startups that match best with your profile</p>";
-              include 'expertise_form.php';
+              echo "<h1>Hi!</h1>";
+              echo "<p>You must be new, please fill in this short questionnaire</p>";
+              include 'new_evaluator_form.php';
             }
             ?>
 
@@ -112,18 +112,6 @@ if(!$valid){
     </div>
     <!-- /.container -->
 
-
-
-
-  <!-- <script>
-    var tags = ['art_&_design', 'education', 'fuck'];
-    for (var i = 0; i < tags.length; ++i) {
-      var element = $(document.getElementById(tags[i]));
-      if(element.is(":checkbox")) {
-        element.prop("checked", true);
-      }
-    }
-  </script> -->
 
 
 

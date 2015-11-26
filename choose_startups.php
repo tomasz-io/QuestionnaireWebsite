@@ -104,6 +104,7 @@ curl_close($rest);
                   <thead>
 
                       <tr>
+                          <th data-field="proximity">Proximity score</th>
                           <th data-field="name">Name</th>
                           <th data-field="tagline">Tagline</th>
                           <th data-field="selected">Selected</th>
@@ -121,6 +122,7 @@ curl_close($rest);
                         if (is_array($val)) {
 
                           echo "<tr>";
+                          echo "<td>$val[FitScore]</td>";
                           echo "<td>$val[Name]</td>";
                           echo "<td>$val[Tagline]</td>";
                           echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]'/></td>";

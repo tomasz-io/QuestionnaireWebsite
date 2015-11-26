@@ -53,7 +53,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3 text-center">
-            <p class="lead">Thanks for your help, it means a lot to us!<br> 
+            <p class="lead">Thanks for your help, it means a lot to us!<br>
             First, we'll check that you're in our database</p>
           </div>
         </div>
@@ -62,7 +62,7 @@
 
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
-            <form action="your_expertise.php" method="post">
+            <form action="email_check.php" method="post">
                 <div class="input-group input-group-lg">
                     <input type="text" class="form-control" name="email" placeholder="Your email">
                 <span class="input-group-btn">
