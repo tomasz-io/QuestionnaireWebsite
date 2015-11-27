@@ -3,7 +3,7 @@
   <h4>What's your main area of expertise?</h4>
 
   <div class="radio">
-    <label><input type="radio" name="expertise" value="biz" required="" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
+    <label><input type="radio" name="expertise" value="biz" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
   </div>
   <div class="radio">
     <label><input type="radio" name="expertise" value="product">Product Strategy / UX / Design / Communication / Marketing</label>
