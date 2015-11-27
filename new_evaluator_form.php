@@ -12,6 +12,20 @@
       </div>
     </div>
 
+    <div class="form-group">
+      <label for="job_title" class="col-sm-2 control-label">Job title</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="job_title" name="job_title">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="based_in" class="col-sm-2 control-label">Where are you based?</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="based_in" name="based_in">
+      </div>
+    </div>
+
     <div class="radio">
       <label>
         <input type="radio" name="gender" id="gender" value="male">

@@ -11,9 +11,9 @@ $headers = array(
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
 $tags = $_POST['tags'];
-$email = $_POST["email"];
 
 session_start();
+$email = $_SESSION["email"];
 $industry = $_SESSION["industry"];
 echo $industry;
 

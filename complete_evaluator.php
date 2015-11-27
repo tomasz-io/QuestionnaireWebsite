@@ -13,13 +13,18 @@ session_start();
 $email = $_SESSION["email"];
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
+$job_title = $_POST["job_title"];
+$based_in = $_POST["based_in"];
 $gender = $_POST["gender"];
 $skill_profile = $_POST["skillProfile"];
 $organisation = $_POST["organisation"];
 $linkedIn = $_POST["linkedIn"];
 $languages = $_POST["languages"];
 
-$data =  array(email => $email, firstName => $first_name, lastName => $last_name, gender => $gender, skillProfile => $skill_profile, organisation => $organisation, linkedIn => $linkedIn, languages => $languages);
+$data =  array(email => $email, firstName => $first_name, lastName => $last_name, jobTitle => $job_title,
+                basedIn => $based_in, gender => $gender, skillProfile => $skill_profile,
+                organisation => $organisation, linkedIn => $linkedIn, languages => $languages);
+
 $objectData = json_encode($data);
 
 echo $objectData;
