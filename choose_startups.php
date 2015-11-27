@@ -100,7 +100,7 @@ curl_close($rest);
           <div class="col-md-10 col-md-offset-1">
             <p class="lead"><?php echo $first ?></p>
             <form action="submit.php" method="post">
-              <table class="table table-hover" id="table">
+              <table class="table table-hover" id="startuptable">
                   <thead>
 
                       <tr>
@@ -120,13 +120,14 @@ curl_close($rest);
 
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
-
-                          echo "<tr>";
-                          echo "<td>$val[FitScore]</td>";
-                          echo "<td>$val[Name]</td>";
-                          echo "<td>$val[Tagline]</td>";
-                          echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]'/></td>";
+                          
+                          echo "<tr>";                    
+                          echo "<td><label for='$val[Id]'>$val[FitScore]</label></td>";
+                          echo "<td><label for='$val[Id]'>$val[Name]</label></td>";
+                          echo "<td><label for='$val[Id]'>$val[Tagline]</label></td>";
+                          echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]' id='$val[Id]'/></td>";
                           echo "</tr>";
+                          
 
                         }
                       }
