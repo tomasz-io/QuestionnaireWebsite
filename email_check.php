@@ -9,7 +9,14 @@ $headers = array(
  "X-Parse-REST-API-Key: " . $restKey
 );
 
-$email = $_POST["email"];
+session_start();
+
+
+$email = $_SESSION["email"];
+if(!$email) {
+  $email = $_POST["email"];
+}
+
 $data =  array(email => $email);
 $objectData = json_encode($data);
 
@@ -27,7 +34,6 @@ curl_close($rest);
 
 // echo $response;
 
-session_start();
 
 $valid = $decoded['result'][0]['isValid'];
 $complete = $decoded['result'][0]['isComplete'];

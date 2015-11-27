@@ -107,15 +107,17 @@
   });
 </script> -->
 
+
 <script>
   $('#tokenfield').tokenfield({
     autocomplete: {
-      source: <?php echo json_encode($to_check); ?>,
+      source: <?php echo (include 'get_all_tags.php'); ?>,
       delay: 100
     },
     showAutocompleteOnFocus: true
   });
 </script>
+
 
 <script>
   var tags = <?php echo json_encode($to_check); ?>;

@@ -27,7 +27,7 @@ $data =  array(email => $email, firstName => $first_name, lastName => $last_name
 
 $objectData = json_encode($data);
 
-echo $objectData;
+// echo $objectData;
 
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
@@ -40,27 +40,19 @@ $response = curl_exec($rest);
 $decoded = json_decode($response, true);
 curl_close($rest);
 
+// echo $_SESSION["email"];
 
-echo $response;
+header("Location: email_check.php");
+die();
 
-session_start();
+// echo $response;
 
-$valid = $decoded['result'][0]['isValid'];
-$complete = $decoded['result'][0]['isComplete'];
+// $valid = $decoded['result'][0]['isValid'];
+// $complete = $decoded['result'][0]['isComplete'];
+//
+// $_SESSION["email"] = $email;
+// $_SESSION["isValid"] = $valid;
+// $_SESSION["isComplete"] = $complete;
 
-$_SESSION["email"] = $email;
-$_SESSION["isValid"] = $valid;
-$_SESSION["isComplete"] = $complete;
 
-// if(!$valid){
-//   header("Location: email_fail.php");
-// } else if ($valid){
-//   if(!$complete){
-//     header("Location: new_evaluator.php");
-//   } else if ($complete){
-//     // echo 'redirecting to expertise';
-//     header("Location: your_expertise.php");
-//   }
-// }
-// die();
 ?>

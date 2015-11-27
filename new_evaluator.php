@@ -44,6 +44,7 @@ if(!$valid){
   } else if ($complete){
     header("Location: your_expertise.php");  }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
