@@ -1,6 +1,6 @@
 var counter = 0;
 // var toteval = 20;
-var toteval = <?php echo 15 ?>;
+// var toteval = <?php echo 15 ?>;
 
 function init () {
 	console.log("initialising counter")
@@ -13,6 +13,7 @@ function countSelected () {
 	console.log("counting selected evals")
 	counter = $(':checkbox:checked').length;
 	updateCounter()
+	percentCalc()
 }
 
 function updateCounter () {
@@ -20,4 +21,15 @@ function updateCounter () {
 	$('#evalcount').text(counter)
 }
 
+function percentCalc () {
+	console.log("calculating percentage")
+	$('#progressbar').width(counter/toteval*100+ "%")
+	pulse()
+	setTimeout(pulse,300)
+
+}
+
+function pulse () {
+	$('#footer-counter').toggleClass("pulse")
+	}
 init();
