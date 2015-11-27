@@ -15,12 +15,12 @@ $tags = $_POST['tags'];
 session_start();
 $email = $_SESSION["email"];
 $industry = $_SESSION["industry"];
-echo $industry;
+// echo $industry;
 
 $final_submission =  array(selected => $selected, expertise => $expertise, industry => $industry, tags => $tags, email => $email);
 $objectData = json_encode($final_submission);
 
-echo $objectData;
+// echo $objectData;
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);

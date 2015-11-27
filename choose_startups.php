@@ -14,12 +14,12 @@ $tags = $_POST["tags"];
 $email = $_POST["email"];
 $data =  array(expertise => $expertise, industry => $industry, tags => $tags);
 $objectData = json_encode($data);
-echo $objectData;
+// echo $objectData;
 
 //TODO pass all variables in session
- session_start();
- echo $industry;
- $_SESSION["industry"] = $industry;
+session_start();
+// echo $industry;
+$_SESSION["industry"] = $industry;
 
 
 $rest = curl_init();
@@ -120,14 +120,14 @@ curl_close($rest);
 
                       foreach ($jsonIterator as $key => $val) {
                         if (is_array($val)) {
-                          
-                          echo "<tr>";                    
+
+                          echo "<tr>";
                           echo "<td><label for='$val[Id]'>$val[FitScore]</label></td>";
                           echo "<td><label for='$val[Id]'>$val[Name]</label></td>";
                           echo "<td><label for='$val[Id]'>$val[Tagline]</label></td>";
                           echo "<td align='center'><input type='checkbox' name='selected[]' value='$val[Id]' id='$val[Id]'/></td>";
                           echo "</tr>";
-                          
+
 
                         }
                       }
