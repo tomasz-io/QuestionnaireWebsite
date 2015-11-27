@@ -69,10 +69,10 @@
     </div>
 
 
-    
+
     <div class="form-group form-group-lg col-sm-12">
     <label for="languages">What languages do you speak?</label>
-    <input required type="text" class="form-control test" id="tokenfield" name="languages" placeholder="Comma-separated, ex.: English, French, German, etc."/>
+    <input required type="text" class="form-control" autocomplete="off" id="tokenfield" name="languages" placeholder="Comma-separated, ex.: English, French, German, etc."/>
     </div>
     <div class="col-sm-12">
     <button type="submit" class="btn btn-lg btn-primary pull-right">Next</button>

@@ -3,7 +3,7 @@
   <h4>What's your main area of expertise?</h4>
 
   <div class="radio">
-    <label><input type="radio" name="expertise" value="biz" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
+    <label><input type="radio" name="expertise" value="biz" required="" title="What's your main area of expertise?">Business / Financial / Investments / Sales</label>
   </div>
   <div class="radio">
     <label><input type="radio" name="expertise" value="product">Product Strategy / UX / Design / Communication / Marketing</label>
@@ -13,13 +13,6 @@
   </div>
 
   <h4>What industries are you a specialist of?</h4>
-
-  <?php
-  $shop = array( array("title"=>"rose", "price"=>1.25 , "number"=>15),
-                 array("title"=>"daisy", "price"=>0.75 , "number"=>25),
-                 array("title"=>"orchid", "price"=>1.15 , "number"=>7)
-               );
-  ?>
 
 
   <?php
@@ -66,7 +59,7 @@
       <p class="desc">Expect to spend 15 minutes per evaluation</p>
 
     <div id="startupqty">
-      <input type="radio" name="startupnum" value="5" id="five">
+      <input type="radio" name="startupnum" value="5" id="five" required="" title="How many startups will you evaluate?">
       <label for="five">5</label>
       <input type="radio" name="startupnum" value="10" id="ten">
       <label for="ten">10</label>
