@@ -23,9 +23,11 @@ function updateCounter () {
 
 function percentCalc () {
 	console.log("calculating percentage")
-	$('#progressbar').width(counter/toteval*100+ "%")
+	var percent = counter/toteval*100
+	percent<=100 ? $('#progressbar').width(percent + "%") : null;
 	pulse()
 	setTimeout(pulse,300)
+	percent>=100 ? $('#footersubmit').removeClass("disabledbtn") : $('#footersubmit').addClass("disabledbtn") 
 
 }
 

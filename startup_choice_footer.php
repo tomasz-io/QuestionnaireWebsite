@@ -7,7 +7,7 @@
         </div>
         <div class="col-sm-2">
           <form class="navbar-form navbar-right" role="submit">
-            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg disabledbtn" id="footersubmit">Submit</button>
           </form>
         </div>
       </div>
