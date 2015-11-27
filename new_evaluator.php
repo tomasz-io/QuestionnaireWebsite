@@ -99,8 +99,8 @@ if(!$valid){
 
             <?php
             if($decoded['result']) {
-              echo "<h1>Hi!</h1>";
-              echo "<p>You must be new, please fill in this short questionnaire</p>";
+              echo "<h1>Hi, you must be new...</h1>";
+              echo "<p>Before we get going, we need some basic info:</p>";
               include 'new_evaluator_form.php';
             }
             ?>
