@@ -1,0 +1,90 @@
+body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+
+#infobox {
+	text-align: left;
+}
+
+nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1 {
+	margin-bottom: 0.5em;
+}
+
+#footer-counter {
+	color:#FFF;
+}
+
+.desc, .jumbotron .desc {
+	font-size: 1em;
+}
+
+.jumbotron h4, h4 {
+	margin-top: 3em;
+}
+
+#startupqty label {
+	margin-right: 1em;
+}
+
+#startupqty .level {
+	display: none;
+}
+
+input[value="5"]:checked ~ #lvl5, input[value="10"]:checked ~ #lvl10, input[value="15"]:checked ~ #lvl15, input[value="20"]:checked ~ #lvl20, input[value="25"]:checked ~ #lvl25, input[value="30"]:checked ~ #lvl30, input[value="35"]:checked ~ #lvl35, input[value="40"]:checked ~ #lvl40 {
+	display: block;
+} {
+	display: block;
+}
+
+#startuptable label {
+	display: block;
+	font-weight: normal;
+}
+
+#footercounter #progressbar{
+	background: #2e6da4;
+	height: 10px;
+	width: 1%;
+	display: block;
+	-webkit-transition: width 300ms ease-in-out;
+	-moz-transition: width 300ms ease-in-out;
+	-ms-transition: width 300ms ease-in-out;
+	-o-transition: width 300ms ease-in-out;
+	transition: width 300ms ease-in-out;
+}
+
+.disabledbtn {
+	background-color: grey;
+	opacity: 0.5;
+}
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
