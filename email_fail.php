@@ -1,25 +1,7 @@
-<?php include('config.php'); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>NUMA EVALUATORS</title>
-    <!-- Bootstrap Core CSS -->
-    <link href="<?php echo CSS_URL; ?>/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo CSS_URL; ?>/custom.css" rel="stylesheet">
-    </style>
-
-</head>
+<?php include('resources/config.php'); ?>
+<?php include('header.php'); ?>
 
 <body>
-
     <!-- Navigation -->
     <?php include 'navbar.php'; ?>
 
@@ -40,11 +22,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-    <script src="js/bootstrap-tokenfield.js"></script>
-
 
 </body>
 

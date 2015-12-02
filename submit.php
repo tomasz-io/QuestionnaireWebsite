@@ -1,12 +1,7 @@
+<?php include('resources/config.php'); ?>
+
 <?php
-$url = 'https://api.parse.com/1/functions/submit';
-$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
-$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
-$headers = array(
- "Content-Type: application/json",
- "X-Parse-Application-Id: " . $appId,
- "X-Parse-REST-API-Key: " . $restKey
-);
+
 
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
@@ -21,6 +16,17 @@ $final_submission =  array(selected => $selected, expertise => $expertise, indus
 $objectData = json_encode($final_submission);
 
 // echo $objectData;
+
+
+$url = 'https://api.parse.com/1/functions/submit';
+
+$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
+$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
+$headers = array(
+ "Content-Type: application/json",
+ "X-Parse-Application-Id: " . $appId,
+ "X-Parse-REST-API-Key: " . $restKey
+);
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -35,45 +41,7 @@ curl_close($rest);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>NUMA EVALUATORS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="css/bootstrap-tokenfield.css">
-    <link href="css/custom.css" rel="stylesheet">
-
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-</head>
+<?php include('header.php'); ?>
 
 <body>
 

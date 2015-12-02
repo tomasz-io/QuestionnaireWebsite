@@ -1,3 +1,4 @@
+<?php include('resources/config.php'); ?>
 <?php
 $url = 'https://api.parse.com/1/functions/getStartups';
 $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
@@ -35,43 +36,14 @@ curl_close($rest);
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>NUMA EVALUATORS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+<?php include('header.php'); ?>
+<body>
 
     <style>
     /*button that appears only on row hover*/
       button.custom{visibility:hidden}
       tr:hover button.custom{visibility:visible}
     </style>
-
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
-</head>
-
-<body>
 
     <!-- Navigation -->
     <?php include 'navbar.php'; ?>

@@ -11,10 +11,9 @@ $headers = array(
 
 session_start();
 
-
-$email = $_SESSION["email"];
+$email = $_POST["email"];
 if(!$email) {
-  $email = $_POST["email"];
+  $email = $_SESSION["email"];
 }
 
 $data =  array(email => $email);

@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>NUMA EVALUATORS</title>
-
-    <!-- Bootstrap Core CSS -->
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-</head>
+<?php include('resources/config.php'); ?>
+<?php include('header.php'); ?>
 
 <body>
-
-
     <!-- Navigation -->
     <?php include 'navbar.php'; ?>
 
@@ -50,8 +25,6 @@
               </div>
               <button type="submit" class="btn btn-primary">Next</button>
             </form>
-
-
           </div>
         </div>
 

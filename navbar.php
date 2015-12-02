@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://www.numa.co"><img style="max-width:120px;max-height:120px; margin-top: 0px;" alt="NUMA" src="images/logo_small.png"></a>
+            <a class="navbar-brand" href="http://www.numa.co"><img style="max-width:120px;max-height:120px; margin-top: 0px;" alt="NUMA" src="<?php echo IMG_URL; ?>/logo_small.png"></a>
         </div>
     </div>
     <!-- /.container -->
