@@ -133,7 +133,6 @@ curl_close($rest);
 
     <!--counter update js-->
     <script type="text/javascript">var toteval = "<?php echo $_POST['startupnum'] ?>";</script>
-    <script type="text/javascript" src="js/eval-counter.php"></script>
 
 
 </body>

@@ -22,6 +22,5 @@
     <script src="<?php echo JS_URL; ?>/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="<?php echo JS_URL; ?>/bootstrap-tokenfield.js"></script>
-
-
+    <script src="<?php echo JS_URL; ?>/eval-counter.php" defer></script>
 </head>

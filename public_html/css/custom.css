@@ -88,3 +88,13 @@ input[value="5"]:checked ~ #lvl5, input[value="10"]:checked ~ #lvl10, input[valu
     -webkit-animation-name: pulse;
     animation-name: pulse;
 }
+
+#evalinfo {
+	padding-left: 16px;
+}
+
+#evalinfo small {
+	font-size: 0.7em;
+	display: inline-block;
+	padding-left:8px; 
+}

@@ -53,30 +53,50 @@ curl_close($rest);
 
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1>Done! What now?</h1>
+                <h1>Next steps:</h1>
             </div>
         </div>
 
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <p class="lead">Within 24 hours, you should receive an email from f6s.com</p>
           </div>
+        </div>
+        <div class="row">
           <div class="col-md-8 col-md-offset-2">
-          <br>
-          <p>While you wait...</p>
-          <p>Read the Evaluator's Guide to understand the process and how to rate the startups</p>
+          <h3>STEP 1.</h3>
+          <p class="">Within <strong>24 hours</strong>, you should receive an email from <strong>donotreply@f6s.com</strong>, if you don't, please contact <a href="mailto:tomasz.s@numa.co">tomasz.s@numa.co</a> </p>
+          <h3>STEP 2.</h3>
+          <p class="">From the email, follow the link provided to start evaluating. <br><small>Note: you'll have to sign up to F6S</small></p>
+          <h3>STEP 3.</h3>
+          <p class="">From the F6S dashboard you'll see the list of your startups to evaluate, you will have until <strong>December 21st to complete evaluations</strong></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+          <h3>Evaluation Tips <small>(the short version)</small></h3>
+
+          <ul id="evalinfo">
+            <li>
+              <p>Your scores save automatically</p>
+            </li>
+            <li>
+              <p>Add comments on the positive and negative aspects in the "Notes" field <small><a>read more</a></small></p>
+            </li>
+            <li>
+            <p>Use the "favorite" tag when you really love a startup</p>
+            </li>
+          <h3>Criteria</h3>
+            <li>
+              <p>Team is the #1 criteria: we are looking for exceptional teams
+              <small><a target="_blank" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.eub98y95mww">read more</a></small></p>
+            </li>
+            
+            <li>
+            <p>The "opportunity/market" criteria tells us how good an opportunity developing this business would be
+            <small><a href="">read more</a></small></p>
+            </li>
+          </ul>
           <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
-          </div>
-          <div class="col-md-8 col-md-offset-2">
-              <hr>
-              <small>
-              <h4>Didn't get the email?</h4>
-              <ul>
-                <li>Check your promotions/social/spam folders for any emails from <u>donotreply@f6s.com</u></li>
-                <li>Make sure you're checking the right inbox and not "that other one" :-)</li>
-                <li>If all else fails, shoot an email to <a href="mailto:tomasz.s@numa.co">tomasz.s@numa.co</a></li>
-              </ul>
-              </div>
           </div>
         </div>
 
