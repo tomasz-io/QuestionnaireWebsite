@@ -80,7 +80,7 @@
 
     <div class="form-group form-group-lg col-sm-12">
       <label for="proud_project">Describe a project you're really proud of:</label>
-      <textarea required class="form-control" rows="5" id="proud_project"></textarea>
+      <textarea required class="form-control" rows="5" id="proud_project" name="proud_project"></textarea>
     </div>
 
     <p>
