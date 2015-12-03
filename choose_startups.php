@@ -98,8 +98,6 @@ curl_close($rest);
                   </tbody>
 
               </table>
-
-              <input type="hidden" name="email" value="<?php echo $email; ?>">
               <input type="hidden" name="expertise" value="<?php echo $expertise; ?>">
               <input type="hidden" name="tags" value="<?php echo $tags; ?>">
 

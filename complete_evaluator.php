@@ -28,7 +28,7 @@ $data =  array(email => $email, firstName => $first_name, lastName => $last_name
 
 $objectData = json_encode($data);
 
-echo $objectData;
+// echo $objectData;
 
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);

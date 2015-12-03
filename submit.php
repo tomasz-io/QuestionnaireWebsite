@@ -14,7 +14,7 @@ $industry = $_SESSION["industry"];
 
 $final_submission =  array(selected => $selected, expertise => $expertise, industry => $industry, tags => $tags, email => $email);
 $objectData = json_encode($final_submission);
-echo $objectData;
+// echo $objectData;
 
 
 $url = 'https://api.parse.com/1/functions/submit';

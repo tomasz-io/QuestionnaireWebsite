@@ -27,9 +27,6 @@ $response = curl_exec($rest);
 $decoded = json_decode($response, true);
 curl_close($rest);
 
-// $all_tags = (include 'get_all_tags.php');
-// echo $all_tags;
-
 $tags_arr = $decoded['result'][0]['tags'];
 $valid = $decoded['result'][0]['valid'];
 
