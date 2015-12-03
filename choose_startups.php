@@ -11,17 +11,18 @@ $headers = array(
 $expertise = $_POST["expertise"];
 $startupnumber = $_POST["startupnum"];
 $industry = $_POST["industry"];
-$tags = $_POST["tags"];
-$email = $_POST["email"];
+$new_tags = $_POST["new_tags"];
+$old_tags = $_POST["old_tags"];
+$tags = $old_tags . ',' . $new_tags;
+
+
 $data =  array(expertise => $expertise, industry => $industry, tags => $tags);
 $objectData = json_encode($data);
 // echo $objectData;
 
-//TODO pass all variables in session
 session_start();
-// echo $industry;
 $_SESSION["industry"] = $industry;
-
+$email = $_SESSION["email"];
 
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
@@ -98,9 +99,9 @@ curl_close($rest);
 
               </table>
 
-              <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
-              <input type="hidden" name="expertise" value="<?php echo $_POST['expertise']; ?>">
-              <input type="hidden" name="tags" value="<?php echo $_POST['tags']; ?>">
+              <input type="hidden" name="email" value="<?php echo $email; ?>">
+              <input type="hidden" name="expertise" value="<?php echo $expertise; ?>">
+              <input type="hidden" name="tags" value="<?php echo $tags; ?>">
 
               <?php include 'startup_choice_footer.php'; ?>
 

@@ -14,8 +14,7 @@ $industry = $_SESSION["industry"];
 
 $final_submission =  array(selected => $selected, expertise => $expertise, industry => $industry, tags => $tags, email => $email);
 $objectData = json_encode($final_submission);
-
-// echo $objectData;
+echo $objectData;
 
 
 $url = 'https://api.parse.com/1/functions/submit';
@@ -66,7 +65,7 @@ curl_close($rest);
           <h3>STEP 1.</h3>
           <p class="">Within <strong>24 hours</strong>, you should receive an email from <strong>donotreply@f6s.com</strong>, if you don't, please contact <a href="mailto:tomasz.s@numa.co">tomasz.s@numa.co</a> </p>
           <h3>STEP 2.</h3>
-          <p class="">From the email, follow the link provided to start evaluating. <br><small>Note: you'll have to sign up to F6S</small></p>
+          <p class="">From the email, follow the link provided to start evaluating. <br><small>Note: you may have to sign up to F6S</small></p>
           <h3>STEP 3.</h3>
           <p class="">From the F6S dashboard you'll see the list of your startups to evaluate, you will have until <strong>December 21st to complete evaluations</strong></p>
           </div>
@@ -89,24 +88,24 @@ curl_close($rest);
             <br>
           <h3>Evaluation Criteria</h3>
           <div>
-            
+
               <h4>Team</h4><p>The #1 criteria: we are looking for exceptional teams.
                             <small><a target="_blank" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.eub98y95mww">more details</a></small></p>
-                      
-            
+
+
             <h4>Opportunity/Market</h4><p>How good an opportunity developing this business would be.
                         <small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.kz3opbx1f1z5" target="_blank">more details</a></small></p>
-            
-            
+
+
             <h4>Customer Knowledge</h4><p>How well the startup understands the customer’s problem they are solving or the needs and behaviours the aim to leverage.
                         <small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.b8dadknr0iwe" target="_blank">more details</a></small></p>
-            
-            
+
+
             <h4>Industry Experience</h4><p>How deep an understanding the team has of their industry and market.<small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.gysss9qdx2d6" target="_blank">more details</a></small></p>
-            
+
             <h4>Competitive Advantage</h4><p>How much the startup has an advantage over competitors (proprietary technology, access to privileged resources or something that they do differently)<small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.7m6uw7h5qsef" target="_blank">more details</a></small></p>
-            
-      
+
+
 
           </div>
           <br>

@@ -14,8 +14,9 @@ $email = $_SESSION["email"];
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
 $job_title = $_POST["job_title"];
-$based_in = $_POST["based_in"];
+$based_in = $_POST["city"];
 $gender = $_POST["gender"];
+$proud_project = $_POST["proud_project"];
 $skill_profile = $_POST["skillProfile"];
 $organisation = $_POST["organisation"];
 $linkedIn = $_POST["linkedIn"];
@@ -23,7 +24,7 @@ $languages = $_POST["languages"];
 
 $data =  array(email => $email, firstName => $first_name, lastName => $last_name, jobTitle => $job_title,
                 basedIn => $based_in, gender => $gender, skillProfile => $skill_profile,
-                organisation => $organisation, linkedIn => $linkedIn, languages => $languages);
+                organisation => $organisation, linkedIn => $linkedIn, languages => $languages, proudProject => $proud_project);
 
 $objectData = json_encode($data);
 
@@ -40,19 +41,6 @@ $response = curl_exec($rest);
 $decoded = json_decode($response, true);
 curl_close($rest);
 
-// echo $_SESSION["email"];
-
 header("Location: email_check.php");
 die();
-
-// echo $response;
-
-// $valid = $decoded['result'][0]['isValid'];
-// $complete = $decoded['result'][0]['isComplete'];
-//
-// $_SESSION["email"] = $email;
-// $_SESSION["isValid"] = $valid;
-// $_SESSION["isComplete"] = $complete;
-
-
 ?>

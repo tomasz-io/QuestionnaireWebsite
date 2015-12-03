@@ -50,9 +50,13 @@
   </table>
   <h4>List all the tags relevant to your area of expertise.</h4>
   <p class="desc">The more tags you provide, the better we can match you to startups!</p>
+  <p class="desc">Tags you already have: </p>
+  <p class="desc"><b><?php echo implode(', ',$user_tags);?></b></p>
+
+
   <div class="input-group input-group-lg col-sm-12">
-    <input type="text" class="form-control test" id="tokenfield" name="tags" value="<?php echo implode(',',$user_tags); ?>" placeholder="Use a comma to separate tags: advertising, conversion optimization, content marketing"/>
-    <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
+    <input type="text" class="form-control test" id="tokenfield" name="new_tags" value="" placeholder="Use a comma to separate tags: advertising, conversion optimization, content marketing"/>
+    <input type="hidden" name="old_tags" value="<?php echo implode(', ',$user_tags);?>">
   </div>
 
       <h4>How many startups will you evaluate?</h4>
