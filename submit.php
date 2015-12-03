@@ -72,31 +72,45 @@ curl_close($rest);
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-          <h3>Evaluation Tips <small>(the short version)</small></h3>
+          <div class="col-md-8 col-md-offset-2" id="evalinfo">
+          <h3>Evaluation Tips</h3>
 
-          <ul id="evalinfo">
+          <ul>
             <li>
-              <p>Your scores save automatically</p>
+              Your scores save automatically
             </li>
             <li>
-              <p>Add comments on the positive and negative aspects in the "Notes" field <small><a>read more</a></small></p>
+              Comment on the positive and negative aspects in the "Notes" field <small><a target="_blank" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#heading=h.mspvow1bvqaz">more details</a></small>
             </li>
             <li>
-            <p>Use the "favorite" tag when you really love a startup</p>
+            Use the "favorite" tag when you really love a startup
             </li>
-          <h3>Criteria</h3>
-            <li>
-              <p>Team is the #1 criteria: we are looking for exceptional teams
-              <small><a target="_blank" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.eub98y95mww">read more</a></small></p>
-            </li>
+            </ul>
+            <br>
+          <h3>Evaluation Criteria</h3>
+          <div>
             
-            <li>
-            <p>The "opportunity/market" criteria tells us how good an opportunity developing this business would be
-            <small><a href="">read more</a></small></p>
-            </li>
-          </ul>
-          <a type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the guide</a>
+              <h4>Team</h4><p>The #1 criteria: we are looking for exceptional teams.
+                            <small><a target="_blank" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.eub98y95mww">more details</a></small></p>
+                      
+            
+            <h4>Opportunity/Market</h4><p>How good an opportunity developing this business would be.
+                        <small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.kz3opbx1f1z5" target="_blank">more details</a></small></p>
+            
+            
+            <h4>Customer Knowledge</h4><p>How well the startup understands the customer’s problem they are solving or the needs and behaviours the aim to leverage.
+                        <small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.b8dadknr0iwe" target="_blank">more details</a></small></p>
+            
+            
+            <h4>Industry Experience</h4><p>How deep an understanding the team has of their industry and market.<small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.gysss9qdx2d6" target="_blank">more details</a></small></p>
+            
+            <h4>Competitive Advantage</h4><p>How much the startup has an advantage over competitors (proprietary technology, access to privileged resources or something that they do differently)<small><a href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit#bookmark=id.7m6uw7h5qsef" target="_blank">more details</a></small></p>
+            
+      
+
+          </div>
+          <br>
+          <a target="_blank" type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the full guide</a>
           </div>
         </div>
 
