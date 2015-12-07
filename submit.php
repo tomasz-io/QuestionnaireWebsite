@@ -57,7 +57,9 @@ curl_close($rest);
         </div>
 
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="col-sm-12 text-center">
+          <a href="javascript:window.print()"><div class="icon-action"><i class="fa fa-print"></i><span>Print this info</span></div></a>
+      
           </div>
         </div>
         <div class="row">
@@ -110,6 +112,13 @@ curl_close($rest);
           </div>
           <br>
           <a target="_blank" type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the full guide</a>
+          </div>          
+        </div>
+        <div class="row">      
+          <div class="col-md-8 col-md-offset-2">
+          <br>
+          <a href="javascript:window.print()"><div class="icon-action"><i class="fa fa-print"></i><span>Print this info</span></div></a>
+      
           </div>
         </div>
 

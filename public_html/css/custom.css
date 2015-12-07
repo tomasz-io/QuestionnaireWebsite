@@ -114,3 +114,8 @@ input[value="5"]:checked ~ #lvl5, input[value="10"]:checked ~ #lvl10, input[valu
 	display: inline-block;
 	padding-left:4px; 
 }
+
+.icon-action span {
+	display: inline-block;
+	margin-left: 0.3em;
+}

@@ -15,7 +15,8 @@
     <link href="<?php echo CSS_URL; ?>/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo CSS_URL; ?>/bootstrap-tokenfield.css" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
     <!-- jQuery Version 1.11.1 -->
     <script src="<?php echo JS_URL; ?>/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
