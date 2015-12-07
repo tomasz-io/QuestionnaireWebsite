@@ -73,22 +73,19 @@
       <label for="twenty">20</label>
       <input type="radio" name="startupnum" value="25" id="twentyfive">
       <label for="twentyfive">25</label>
-      <input type="radio" name="startupnum" value="30" id="thirty">
-      <label for="thirty">30</label>
-      <input type="radio" name="startupnum" value="35" id="thirtyfive">
-      <label for="thirtyfive">35</label>
-      <input type="radio" name="startupnum" value="40" id="forty">
-      <label for="forty">40</label>
-      <div class="level" id="lvl5">Better than nothing, right?</div>
-      <div class="level" id="lvl10">That's a reasonable start</div>
-      <div class="level" id="lvl15">Good, that's very helpful!</div>
-      <div class="level" id="lvl20">Wow, we're pretty impressed!</div>
-      <div class="level" id="lvl25">You must be a veteran!</div>
-      <div class="level" id="lvl30">You really love startups! Don't you?</div>
-      <div class="level" id="lvl35">Ok, we owe you dinner :-)</div>
-      <div class="level" id="lvl40">Who are you!? Chuck Norris?</div>
+      <div class="level" id="lvl5">That's a start!</div>
+      <div class="level" id="lvl10">Good, that's very helpful!</div>
+      <div class="level" id="lvl15">That's impressive!</div>
+      <div class="level" id="lvl20">You must be a veteran!</div>
+      <div class="level" id="lvl25">Who are you!? Chuck Norris?</div>
     </div>
 
+    <div class="checkbox" style="text-align:right">
+    <br>
+      <label>
+        <input required type="checkbox"> I agree to the <a target="_blank" href="https://docs.google.com/document/d/1Yp1JouaytSnQl2IGYaUAX3u-MyCzRk5i-W9GCFwzYck/edit#">Selection Commitee Agreement</a>
+      </label>
+    </div>
     <button type="submit" class="btn btn-lg btn-primary pull-right">Next</button>
 
 </form>
