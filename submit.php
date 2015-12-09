@@ -1,7 +1,6 @@
-<?php include('resources/config.php'); ?>
-
 <?php
 
+include('resources/config.php');
 
 $selected = $_POST["selected"];
 $expertise = $_POST["expertise"];
@@ -18,14 +17,14 @@ $objectData = json_encode($final_submission);
 
 
 $url = 'https://api.parse.com/1/functions/submit';
-
-$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
-$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
-$headers = array(
- "Content-Type: application/json",
- "X-Parse-Application-Id: " . $appId,
- "X-Parse-REST-API-Key: " . $restKey
-);
+//
+// $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
+// $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
+// $headers = array(
+//  "Content-Type: application/json",
+//  "X-Parse-Application-Id: " . $appId,
+//  "X-Parse-REST-API-Key: " . $restKey
+// );
 $rest = curl_init();
 curl_setopt($rest,CURLOPT_URL,$url);
 curl_setopt($rest,CURLOPT_POST,1);
@@ -59,7 +58,7 @@ curl_close($rest);
         <div class="row">
           <div class="col-sm-12 text-center">
           <a href="javascript:window.print()"><div class="icon-action"><i class="fa fa-print"></i><span>Print this info</span></div></a>
-      
+
           </div>
         </div>
         <div class="row">
@@ -112,13 +111,13 @@ curl_close($rest);
           </div>
           <br>
           <a target="_blank" type="button" href="https://docs.google.com/document/d/1SeV_zyVw9eHq5sSdlkbzKl7hQluo3NZFfIpDHdApSE0/edit?usp=sharing" class="btn btn-lg btn-primary">Read the full guide</a>
-          </div>          
+          </div>
         </div>
-        <div class="row">      
+        <div class="row">
           <div class="col-md-8 col-md-offset-2">
           <br>
           <a href="javascript:window.print()"><div class="icon-action"><i class="fa fa-print"></i><span>Print this info</span></div></a>
-      
+
           </div>
         </div>
 

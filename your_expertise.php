@@ -1,15 +1,15 @@
-<?php include('resources/config.php'); ?>
 
 <?php
+include('resources/config.php');
 
 $url = 'https://api.parse.com/1/functions/getTagsAndIndustries';
-$appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
-$restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
-$headers = array(
- "Content-Type: application/json",
- "X-Parse-Application-Id: " . $appId,
- "X-Parse-REST-API-Key: " . $restKey
-);
+// $appId = 'XYVa8aop9gJj7A7GC4Rl5KELXIJCOD2dceWu1QhP';
+// $restKey = 'jxxaxaNj0avTQXQPH51DLT8f3vXRRqPBLm6ssiuY';
+// $headers = array(
+//  "Content-Type: application/json",
+//  "X-Parse-Application-Id: " . $appId,
+//  "X-Parse-REST-API-Key: " . $restKey
+// );
 
 session_start();
 $email = $_SESSION["email"];
